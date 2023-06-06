@@ -1,5 +1,21 @@
-*{
-    padding: 0%;
-    margin: 0;
-    box-sizing: border-box;
+.list{
+    background-color: aquamarine;
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+body{
+    background-color: red;
+}
+
+
+h1{
+    text-align: center;
+}
+
+.adder{
+    margin: 0 auto;
 }
