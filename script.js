@@ -26,6 +26,23 @@ createApp ({
             newToDo  : "",
         }
     },
+
+    methods: {
+        removeToDo (whichToDo) {
+            this.ToDoList.splice (whichToDo, 1)
+        },
+
+        textLiner (item){
+            item.done = !item.done;
+        },
+
+        addNewToDo (newToDo) {
+            if (this.newToDo.text !== ""){
+                this.ToDoList.push ({text: newToDo, done: false })
+            }
+            this.newToDo = ""
+        }
+    }
 }).mount ("#app")
 
 

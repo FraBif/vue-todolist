@@ -21,14 +21,17 @@
         <div class="my_list_container m-auto">
             <ul>
                 <li v-for ="(text, index) in toDoList">
-                    <span> {{ text }} </span>
-                    <i class="fa-solid fa-xmark fa-xl" style="color: #ff0000;"></i>
+                    <span @click="textLiner(item)" class="done"> {{ text }} </span>
+                    <button @click.stop="removeToDo(index)" >
+                        <i class="fa-solid fa-xmark fa-xl" style="color: #ff0000;"></i>
+                    </button>
+                    
                 </li>
             </ul>
         </div>
         <div class="my_input_button">
-            <input type="text" placeholder="Scrivi qui il tuo ToBoo">
-            <button>
+            <input type="text" placeholder="Scrivi qui il tuo ToBoo" v-model="newToDo" @keydown.enter="addNewToDo(newToDo)">
+            <button  @click="addNewToDo(newToDo)">
                 Aggiungi alla lista
             </button>
         </div>
