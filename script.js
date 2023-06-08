@@ -1,35 +1,32 @@
-const { createApp } = Vue
+const {createApp} = Vue
 
-createApp({
-    data(){
-        return {
-            toDoList : [
-                {
-                    text: 'Provare a capire qualcosa della programmazione',
-                    done: false,
-                
-                }, {
-                    text: 'Studiare la teoria della programmazione',
-                    done: false,
-                    
-                }, {
-                    text: 'Provare ad applicare la teoria alla pratica',
-                    done: false,
-                }, {
-                    text: 'Rendersi conto che qualcosa non va',
-                    done: true,
-                }, {
-                    text: 'Piangere sul divanetto del Napoli',
-                    done: true,
-                }
-            ] ,
-            newToDo : ''
-        }
-
+createApp ({
+    data () {
+        return{
+            toDoList: [{
+                text: "Capire qualcosa della programmazione",
+                done: false
+            },
     
+                {text: "Studiare la teoria",
+                done: false
+            },
+    
+                {text: "Applicare la teoria alla pratica",
+                done: true
+            },
+    
+                {text: "Non funziona nulla",
+                done: true
+            },
+    
+                {text: "Piangere sul divano del napoli",
+                done: false
+            }],
+            newToDo  : "",
+        }
     },
-    methods : 
-})
+}).mount ("#app")
 
 
 

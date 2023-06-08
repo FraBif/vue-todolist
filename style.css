@@ -1,21 +1,30 @@
-.list{
-    background-color: aquamarine;
-    width: 800px;
-    height: 800px;
-    margin: 0 auto;
-    text-align: center;
+body{
+    background-color: black;
+}
+
+.my_list_container{
+    background-color: white;
+    height: 80%;
+    width: 50%;
+}
+
+ul{
+    margin-top: 40px;
+    list-style: none;
+    padding: 2rem;
     
 }
 
-body{
-    background-color: red;
+li{
+    border: 2px solid black;
+    margin-top: 30px;
 }
-
 
 h1{
-    text-align: center;
+    color: blue;
 }
 
-.adder{
-    margin: 0 auto;
+.my_input_button{
+    margin-left:594px ;
 }
+
