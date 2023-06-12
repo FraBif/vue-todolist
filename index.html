@@ -10,32 +10,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
       
-     <div id="app">
-        <header class="text-center">
-            <h1 class="fw-bold">
-                My ToBooList
-            </h1>
-        </header>
-        <div class="my_list_container m-auto">
-            <ul>
-                <li v-for ="(text, index) in toDoList">
-                    <span @click="textLiner(item)" class="done"> {{ text }} </span>
-                    <button @click.stop="removeToDo(index)" >
-                        <i class="fa-solid fa-xmark fa-xl" style="color: #ff0000;"></i>
-                    </button>
-                    
-                </li>
-            </ul>
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <header>
+        <h1> My ToBooList</h1>
+    </header>
+    <main id ="app">
+        <div class="my_box_container">
+                <div class="container d-flex flex-column justify-content-center align-items-center">
+                <div class="list">
+                    <ul>
+                        <li v-for ="(element, index) in toDoList" class="d-flex justify-content-between">
+                            <span :class="{done: element.done}" @click="textLiner(element)">{{ element.text }}</span>
+                            <span @click="removeElement(index)"><i class="fa-solid fa-xmark fa-lg" style="color: #00ff00;"></i></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="add-new-item d-flex justify-content-center">
+                    <input type="text" class="my_bar" v-model="newListElement" @keyup.enter="addNewListElement()">
+                    <button @click="addNewListElement()">Add new ToBoo</button>
+                </div>
+            </div>
         </div>
-        <div class="my_input_button">
-            <input type="text" placeholder="Scrivi qui il tuo ToBoo" v-model="newToDo" @keydown.enter="addNewToDo(newToDo)">
-            <button  @click="addNewToDo(newToDo)">
-                Aggiungi alla lista
-            </button>
-        </div>
-     </div>
+        
+    </main>
     
     <script src="script.js"></script>
 </body>
